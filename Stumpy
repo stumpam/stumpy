@@ -1,0 +1,95 @@
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    // This layout uses same keys for diacritics, so it has enough free keys to easy programming
+    // Based on English layout keyboard
+    // 2019 by Martin Štumpa <martin@stumpa.eu>
+
+    include "latin"
+    name[Group1]= "Stumpy";
+
+    // key <TLDE>  { [ semicolon, dead_abovering,    grave,   asciitilde ] };
+    key <TLDE>  { [ grave, asciitilde, dead_abovering,    grave    ] };
+
+    //key <AE01>  { [      plus,          1,       exclam,   dead_tilde ] };
+    key <AE01>  { [ 1, exclam, dead_acute, NoSymbol ] };
+
+    //key <AE02>  { [    ecaron,          2,           at,   dead_caron ] };
+    key <AE02>  { [ 2, at, dead_caron, NoSymbol ] };
+
+    //key <AE03>  { [    scaron,          3,   numbersign, dead_circumflex ] };
+    key <AE03>  { [ 3, numbersign, dead_diaeresis, NoSymbol ] };
+
+    //key <AE04>  { [    ccaron,          4,       dollar,   dead_breve ] };
+    key <AE04>  { [ 4, dollar, NoSymbol, NoSymbol ] };
+
+    //key <AE05>  { [    rcaron,          5,      percent, dead_abovering]};
+    key <AE05>  { [ 5, percent, EuroSign, NoSymbol ]};
+
+    //key <AE06>  { [    zcaron,          6,  asciicircum,  dead_ogonek ] };
+    key <AE06>  { [ 6, asciicircum, NoSymbol, NoSymbol ] };
+
+    //key <AE07>  { [    yacute,          7,    ampersand,   dead_grave ] };
+    key <AE07>  { [ 7, ampersand, NoSymbol, NoSymbol ] };
+
+    //key <AE08>  { [    aacute,          8,     asterisk, dead_abovedot] };
+    key <AE08>  { [ 8, asterisk, uacute, Uacute] };
+
+    //key <AE09>  { [    iacute,          9,    braceleft,   dead_acute ] };
+    key <AE09>  { [ 9, braceleft, NoSymbol, NoSymbol ] };
+
+    //key <AE10>  { [    eacute,          0,   braceright, dead_doubleacute ] };
+    key <AE10>  { [ 0, braceright, NoSymbol, NoSymbol ] };
+
+    //key <AE11>  { [     equal,    percent,     NoSymbol, dead_diaeresis]};
+    key <AE11>  { [ minus, underscore,     NoSymbol, dead_diaeresis]};
+
+    //key <AE12>  { [dead_acute, dead_caron,  dead_macron, dead_cedilla ] };
+    key <AE12>  { [ equal, plus, NoSymbol, NoSymbol ] };
+
+    key <AD01>  { [ q, Q, NoSymbol, NoSymbol ] };
+    key <AD02>  { [ w, W, eacute, Eacute ] };
+    key <AD03>  { [ e, E, ecaron, Ecaron ] };
+    key <AD04>  { [ r, R, rcaron, Rcaron ] };
+    key <AD05>  { [ t, T, tcaron, Tcaron ] };
+    key <AD06>  { [ y, y, yacute, Yacute ] };
+    key <AD07>  { [ u, U, uring, Uring ] };
+    key <AD08>  { [ i, I, iacute, Iacute ] };
+    key <AD09>  { [ o, O, oacute, Oacute ] };
+    key <AD10>  { [ p, P, NoSymbol, NoSymbol ] };
+
+    key <AD11>  { [ parenleft, bracketleft, braceleft, divide ] };
+    key <AD12>  { [ parenright, bracketright, braceright, multiply ] };
+
+    key <AC01>  { [ a, A, aacute, Aacute ] };
+    key <AC02>  { [ s, S, scaron, Scaron ] };
+    key <AC03>  { [ d, D, dcaron, Dcaron ] };
+    key <AC04>  { [ f, F, NoSymbol, NoSymbol ] };
+    key <AC05>  { [ g, G, NoSymbol, NoSymbol ] };
+    key <AC06>  { [ h, H, NoSymbol, NoSymbol ] };
+    key <AC07>  { [ j, J, NoSymbol, NoSymbol ] };
+    key <AC08>  { [ k, K, NoSymbol, NoSymbol ] };
+    key <AC09>  { [ l, L, NoSymbol, NoSymbol ] };
+
+    key <AC10>  { [ semicolon,   colon, section, NoSymbol ] };
+    key <AC11>  { [ apostrophe, quotedbl, apostrophe, NoSymbol ] };
+    //key <AC12>  { [  EuroSign, dead_diaeresis, NoSymbol,     NoSymbol ] };
+    key <BKSL>  { [ ampersand, dollar, degree, NoSymbol ] };
+
+    key <LSGT>  { [ backslash,        bar,        slash,     NoSymbol ] };
+    key <AB01>  { [ z, Z, zcaron, Zcaron ] };
+    key <AB02>  { [ x, X, numbersign, NoSymbol ] };
+    key <AB03>  { [ c, C, ccaron, Ccaron ] };
+    key <AB04>  { [ v, V, ssharp, NoSymbol ] };
+    key <AB05>  { [ b, B, NoSymbol, NoSymbol ] };
+    key <AB06>  { [ n, N, ncaron, Ncaron ] };
+    key <AB07>  { [ m, M, NoSymbol, NoSymbol ] };
+    key <AB08>  { [ comma, less, NoSymbol, NoSymbol ] };
+    key <AB09>  { [ period, greater, NoSymbol, NoSymbol ] };
+    key <AB10>  { [ slash, question, NoSymbol, NoSymbol ] };
+
+    key <SPCE>  { [     space,      space,        space,       space  ] };
+
+    include "level3(ralt_switch)"
+    include "level3(caps_switch)"
+};
